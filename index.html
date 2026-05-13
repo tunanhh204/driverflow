@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>DriverFlow</title>
+    <meta name="description" content="Quản lý tài chính thông minh dành cho tài xế công nghệ" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- iOS PWA: bắt buộc để chạy fullscreen như app thật -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="DriverFlow" />
+
+    <!-- iOS App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/icon-120.png" />
+
+    <!-- iOS Splash Screens -->
+    <link rel="apple-touch-startup-image" href="/splash/splash-1290x2796.png"
+      media="(device-width:430px) and (device-height:932px) and (-webkit-device-pixel-ratio:3)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-1170x2532.png"
+      media="(device-width:390px) and (device-height:844px) and (-webkit-device-pixel-ratio:3)" />
+    <link rel="apple-touch-startup-image" href="/splash/splash-750x1334.png"
+      media="(device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2)" />
+
+    <!-- Theme color thanh trạng thái -->
+    <meta name="theme-color" content="#070B19" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/icons/icon-192.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
