@@ -93,7 +93,7 @@ export function SplashScreen() {
         {/* Subtitle — kéo sát lên logo */}
         <p
           style={{
-            marginTop: '-32px',
+            marginTop: '-80px',
             fontSize: '16px',
             fontWeight: 500,
             color: 'rgba(255,255,255,0.82)',
