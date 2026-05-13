@@ -46,9 +46,9 @@ export function SplashScreen() {
         className="relative z-10 flex flex-col items-center"
         style={{ paddingTop: '22vh' }}
       >
-        {/* Logo: mix-blend-mode screen xóa nền đen của logo.jpg */}
+        {/* Logo: mix-blend-mode screen xóa nền đen của logo.png */}
         <img
-          src="/logo.jpg"
+          src="/logo.png"
           alt="DriverFlow Logo"
           style={{
             width: '72%',
@@ -61,7 +61,7 @@ export function SplashScreen() {
         {/* Subtitle sát ngay dưới logo */}
         <p
           className="text-white/80 font-medium text-center leading-relaxed"
-          style={{ fontSize: '15px', marginTop: '-6px' }}
+          style={{ fontSize: '15px', marginTop: '-80px' }}
         >
           Quản lý tài chính thông minh<br />dành cho tài xế công nghệ
         </p>
