@@ -15,53 +15,54 @@ export function SplashScreen() {
   return (
     <div className="flex flex-col min-h-screen bg-[#070B19] relative overflow-hidden">
 
-      {/* ── Background image: chiếm 60% phía dưới màn hình ── */}
-      <div className="absolute bottom-0 left-0 right-0 h-[62%] z-0">
+      {/* Background image phủ toàn màn hình */}
+      <div className="absolute inset-0 z-0">
         <img
           src="/background.jpg"
           alt="background"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: 'center 60%' }}
         />
-        {/* Gradient fade: trên cùng của ảnh → trong suốt */}
+        {/* Gradient trên: che 35% để logo nổi */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, #070B19 0%, #070B19 8%, transparent 45%)',
+              'linear-gradient(to bottom, #070B19 0%, #070B19 35%, rgba(7,11,25,0.80) 50%, rgba(7,11,25,0.15) 72%, transparent 100%)',
           }}
         />
-        {/* Gradient fade: dưới cùng → đen để khỏi bị cắt cứng */}
+        {/* Gradient dưới: tránh viền cứng */}
         <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(to top, #070B19 0%, transparent 30%)',
-          }}
+          className="absolute bottom-0 left-0 right-0 h-20"
+          style={{ background: 'linear-gradient(to top, #070B19, transparent)' }}
         />
       </div>
 
-      {/* ── Nội dung: logo + subtitle ── */}
+      {/* Logo + Subtitle */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.85, ease: "easeOut" }}
-        className="relative z-10 flex flex-col items-center pt-[28vh] px-6"
+        className="relative z-10 flex flex-col items-center"
+        style={{ paddingTop: '22vh' }}
       >
-        {/*
-          Logo image:
-          – logo.jpg có nền đen (#0A0F1E), gần giống nền app (#070B19)
-          – mix-blend-mode: screen làm nền đen trở nên trong suốt,
-            chỉ giữ lại phần trắng/xanh của logo
-        */}
+        {/* Logo: mix-blend-mode screen xóa nền đen của logo.jpg */}
         <img
           src="/logo.jpg"
           alt="DriverFlow Logo"
-          className="w-56 h-56 object-contain"
-          style={{ mixBlendMode: 'screen' }}
+          style={{
+            width: '72%',
+            maxWidth: '300px',
+            objectFit: 'contain',
+            mixBlendMode: 'screen',
+          }}
         />
 
-        {/* Subtitle */}
-        <p className="text-white/75 font-medium text-center text-[15px] leading-relaxed max-w-[260px] -mt-4">
+        {/* Subtitle sát ngay dưới logo */}
+        <p
+          className="text-white/80 font-medium text-center leading-relaxed"
+          style={{ fontSize: '15px', marginTop: '-6px' }}
+        >
           Quản lý tài chính thông minh<br />dành cho tài xế công nghệ
         </p>
       </motion.div>
